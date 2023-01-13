@@ -16,7 +16,7 @@ const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 
 const road = new Image()
-road.src = '../images/road.png'
+road.src = './images/road.png'
 
 class Car {
   constructor() {
@@ -32,7 +32,7 @@ class Car {
       }
     })
 
-    car.src = '../images/car.png'
+    car.src = './images/car.png'
   }
 
   moveLeft() {
