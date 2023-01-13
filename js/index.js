@@ -72,7 +72,7 @@ let currentScore = 0
 
 setInterval(() => {
   const randWidth = Math.floor(Math.random() * 125) + 75
-  const randStartingX = Math.floor(Math.random() * 125) + 75
+  const randStartingX = Math.floor(Math.random() * 140) + 75
   
   const newObstacle = new Obstacle(randWidth, randStartingX)
   obstaclesArray.push(newObstacle)
@@ -107,7 +107,7 @@ const updateCanvas = () => {
 const updateObstacles = () => {
   obstaclesArray.forEach((obstacle) => {
     
-    obstacle.y += 5
+    obstacle.y += 5 + survivedObstacles
 
     // every obstacle that is survived by car increases combo and score adds exponentially
     if (obstacle.y >= 650) {
